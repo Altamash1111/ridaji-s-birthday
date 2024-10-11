@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #171313; /* Light green background */
+    color: #ffffff; /* Text color */
+    text-align: center;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(135deg, #9203ff, #1a01ff); /* Bright gradient background */
+    color: white; /* Header text color */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in; /* Animation for the header */
+}
+
+header h1 {
+    font-size: 3rem; /* Larger font size */
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.gallery {
+    margin: 30px 0;
+}
+
+.gallery h2 {
+    font-size: 2rem; /* Larger gallery heading */
+    margin-bottom: 15px;
+    animation: slideIn 1s ease-in-out; /* Animation for the gallery heading */
+    color: #ffffff; /* Gallery heading color */
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photos img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgb(255, 255, 255);
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeInUp 1s ease-in forwards; /* Animation for photos */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.photos img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 10px 30px rgb(255, 255, 255); /* Increase shadow on hover */
+}
+
+.birthday-message {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #b10000; /* Message background color */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(255, 255, 255);
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s ease-in forwards 1.5s; /* Animation for the message */
+}
+
+.birthday-message h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffffff; /* Message heading color */
+}
+
+.birthday-message p {
+    font-size: 1.2rem; /* Increased font size for better readability */
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 1.2rem; /* Increased font size for footer */
+    color: #ffffff;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
